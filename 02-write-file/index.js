@@ -4,10 +4,6 @@ const readline = require('readline');
 
 const filePath = path.join(__dirname, 'text.txt');
 
-if (!fs.existsSync(filePath)) {
-  fs.closeSync(fs.openSync(filePath, 'w'));
-}
-
 const writeStream = fs.createWriteStream(filePath, { flags: 'a' });
 
 const rl = readline.createInterface({
